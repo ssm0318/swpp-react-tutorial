@@ -5,6 +5,8 @@ import TodoDetail from '../../components/TodoDetail/TodoDetail';
 import NewTodo from './NewTodo/NewTodo';
 import './TodoList.css';
 
+import { NavLink } from 'react-router-dom';
+
 class TodoList extends Component {
     state = {
         todos: [
@@ -41,6 +43,7 @@ class TodoList extends Component {
                 <div className='todos'>{todos}</div>
                 {todoDetail}
                 <NewTodo/>
+                <NavLink to='/new-todo' exact>New Todo</NavLink>
             </div>
         );
     }
